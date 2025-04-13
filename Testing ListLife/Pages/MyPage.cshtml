@@ -64,7 +64,15 @@ else
                                     </button>
                                 </form>
                                 <!-- Hidden Email Input Field for Sharing -->
-                                <form method="post" asp-page-handler="Share" id="emailForm-@list.Id" style="display:none; margin-top: 5px;">
+@*                                 <form method="post" asp-page-handler="Share" id="emailForm-@list.Id" style="display:none; margin-top: 5px;">
+                                    <input type="hidden" name="listId" value="@list.Id" />
+                                    <input type="email" name="UserEmail" placeholder="Enter user’s email" required />
+                                    <button type="submit" class="btn btn-success small-btn">Send</button>
+                                </form> *@
+                                <form method="post" asp-page-handler="Share"
+                                      id="emailForm-@list.Id"
+                                      data-list-title="@list.Title"
+                                      style="display:none; margin-top: 5px;">
                                     <input type="hidden" name="listId" value="@list.Id" />
                                     <input type="email" name="UserEmail" placeholder="Enter user’s email" required />
                                     <button type="submit" class="btn btn-success small-btn">Send</button>

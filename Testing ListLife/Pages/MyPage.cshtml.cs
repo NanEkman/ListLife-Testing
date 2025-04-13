@@ -24,9 +24,6 @@ namespace ListLife.Pages
             _userManager = userManager;
         }
 
-        
-
-
         //Properties for the sharing list functionality
         [BindProperty]
         public string UserEmail { get; set; }
