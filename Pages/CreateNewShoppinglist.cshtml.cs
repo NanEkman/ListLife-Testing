@@ -61,7 +61,7 @@ namespace ListLife.Pages
             }
         }
 
-        public async Task<IActionResult> OnPostAsync()
+        public virtual async Task<IActionResult> OnPostAsync()
         {
             var user = await userManager.GetUserAsync(User);
             if (user != null)
@@ -90,9 +90,7 @@ namespace ListLife.Pages
 
                 // Rensa product input fält
                 ModelState.Remove("Products");
-                Products = new List<Product>();
-
-                
+                Products = new List<Product>();                
             }
 
             return RedirectToPage("/MyPage");
